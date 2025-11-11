@@ -4,31 +4,60 @@ import $ from 'jquery';
 import './Nav.css'
 import { smoothScroll } from '../App/App';
 
-const Display = ({setRef, isProject}) => (
-	<nav ref={setRef} className={`navbar navbar-expand-lg navbar-light fixed-top ${isProject ? 'navbar-shrink': ''}`} id="mainNav">
+const Display = ({ setRef, isProject }) => (
+  <nav
+    ref={setRef}
+    className={`navbar navbar-expand-lg navbar-light fixed-top ${
+      isProject ? "navbar-shrink" : ""
+    }`}
+    id="mainNav"
+  >
     <div className="container">
-      <a onClick={isProject?()=>{}:smoothScroll} className="navbar-brand" href={(isProject?'/':'')+"#page-top"}>
-      	{"{ "}J<span className="name">uliet </span>S<span className="name">abol</span>{" }"}
+      <a
+        onClick={isProject ? () => {} : smoothScroll}
+        className="navbar-brand"
+        href={(isProject ? "/" : "") + "#page-top"}
+      >
+        {"{ "}J<span className="name">uliet </span>S
+        <span className="name">abol</span>
+        {" }"}
       </a>
-      <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <button
+        className="navbar-toggler navbar-toggler-right"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarResponsive"
+        aria-controls="navbarResponsive"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span className="navbar-toggler-icon"></span>
       </button>
       <div className="collapse navbar-collapse" id="navbarResponsive">
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">
-            <a onClick={isProject?()=>{}:smoothScroll} className="nav-link" href={(isProject?'/':'')+"#portfolio"}>Work</a>
+            <a
+              onClick={isProject ? () => {} : smoothScroll}
+              className="nav-link"
+              href={(isProject ? "/" : "") + "#about"}
+            >
+              About
+            </a>
           </li>
           <li className="nav-item">
-            <a onClick={isProject?()=>{}:smoothScroll} className="nav-link" href={(isProject?'/':'')+"#about"}>About</a>
-          </li>
-          <li className="nav-item">
-            <a onClick={isProject?()=>{}:smoothScroll} className="nav-link" href={(isProject?'/':'')+"#contact"}>Contact</a>
+            <a
+              onClick={isProject ? () => {} : smoothScroll}
+              className="nav-link"
+              href={(isProject ? "/" : "") + "#contact"}
+            >
+              Contact
+            </a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-)
+);
 
 export default class Nav extends Component {
 

@@ -5,8 +5,7 @@ import $ from 'jquery';
 import './App.css';
 import Nav from '../Nav/Nav';
 import Jumbotron from '../Jumbotron/Jumbotron';
-import About from '../About/About';
-import Work from '../Work/Work';
+import About from "../About/About";
 import Project from '../Work/Project';
 import Contact from '../Contact/Contact';
 
@@ -28,11 +27,10 @@ const Home = (props) => (
   <div>
     <Nav />
     <Jumbotron />
-    <Work />
     <About />
     <Contact />
   </div>
-)
+);
 
 class App extends Component {
 

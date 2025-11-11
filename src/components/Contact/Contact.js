@@ -11,27 +11,19 @@ const Contact = () => (
         </div>
       </div>
       <div className="row">
-        <div className="col-md-3 ml-auto text-center">
+        <div className="col-md-4 ml-auto text-center">
           <a href="https://www.linkedin.com/in/jasabol/">
             <i className="fab fa-linkedin fa-3x mb-3 sr-contact"></i>
             <p>Linkedin</p>
           </a>
         </div>
-        <div className="col-md-3 mr-auto text-center">
+        <div className="col-md-4 mr-auto text-center">
           <a href="mailto:julietsabol@gmail.com">
             <i className="far fa-envelope fa-3x mb-3 sr-contact"></i>
-            <p>
-              julietsabol@gmail.com
-            </p>
+            <p>julietsabol@gmail.com</p>
           </a>
         </div>
-        <div className="col-md-3 ml-auto text-center">
-          <a href="https://twitter.com/JulietSabol">
-            <i className="fab fa-twitter fa-3x mb-3 sr-contact"></i>
-            <p>@JulietSabol</p>
-          </a>
-        </div>
-        <div className="col-md-3 ml-auto text-center">
+        <div className="col-md-4 ml-auto text-center">
           <a href="https://github.com/jsabol">
             <i className="fab fa-github fa-3x mb-3 sr-contact"></i>
             <p>jsabol</p>
