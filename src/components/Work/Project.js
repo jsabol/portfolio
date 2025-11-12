@@ -5,7 +5,7 @@ import ImageZoom from 'react-medium-image-zoom';
 
 import Nav from '../Nav/Nav';
 
-/* eslint import/no-webpack-loader-syntax: off */
+/* eslint-disable */
 import ofr from '!raw-loader!../../projects/ofr.md';
 import nestedDnd from '!raw-loader!../../projects/nested-dnd.md';
 import uxPractice from '!raw-loader!../../projects/ux-practice.md';
