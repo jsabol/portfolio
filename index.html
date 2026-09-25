@@ -28,8 +28,10 @@
       }
     }
     * { box-sizing: border-box; }
-    html, body { height: 100%; margin: 0; }
     body {
+      margin: 0;
+      min-height: 100vh;
+      min-height: 100dvh;
       display: grid;
       place-items: center;
       padding: 24px;
@@ -70,6 +72,37 @@
     nav a:hover { background: var(--btn-hover); border-color: var(--muted); }
     nav a:focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
     nav svg { width: 18px; height: 18px; fill: currentColor; }
+    .projects {
+      width: min(440px, 100%);
+      margin: 56px auto 0;
+      text-align: left;
+    }
+    .projects h2 {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    .projects ul { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+    .projects li { border-bottom: 1px solid var(--line); }
+    .projects a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 4px;
+      color: var(--fg);
+      text-decoration: none;
+    }
+    .projects a:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
+    .project-title { display: block; font-weight: 500; }
+    .project-desc, .project-url { display: block; margin-top: 3px; color: var(--muted); font-size: 0.875rem; line-height: 1.4; }
+    .projects .arrow { flex: none; color: var(--muted); transition: transform .15s ease, color .15s ease; }
+    .projects a:hover .arrow { color: var(--fg); transform: translate(2px, -2px); }
+    .projects a:hover .project-title { text-decoration: underline; text-underline-offset: 3px; }
   </style>
 </head>
 <body>
@@ -86,6 +119,29 @@
         LinkedIn
       </a>
     </nav>
+    <section class="projects" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Projects</h2>
+      <ul>
+        <li>
+          <a href="https://theconstant.tasktree.games">
+            <span>
+              <span class="project-title">The Constant Task Tree</span>
+              <span class="project-desc">Game completionist checklist for Don't Starve Together</span>
+            </span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://tabletop.julietsabol.com">
+            <span>
+              <span class="project-title">Tabletop Campaign Manager</span>
+              <span class="project-url">tabletop.julietsabol.com</span>
+            </span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+      </ul>
+    </section>
   </main>
 </body>
 </html>
